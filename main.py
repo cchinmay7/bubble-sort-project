@@ -1,5 +1,5 @@
 def get_user_input():
-    return input("Provide numbers (space-separated): ").split()
+    return input("Provide numbers (space-separated) in one line: ").split()
 
 def bubble_sort(arr):
     """
@@ -25,15 +25,15 @@ def bubble_sort(arr):
             break
     return arr
 
-    def validate_input(arr):
-        """
-        Validates the input array for the Bubble Sort algorithm.
+def validate_input(arr):
+    """
+    Validates the input array for the Bubble Sort algorithm.
 
-        :param arr: Input array to be sorted
-        :raises TypeError: If input is not a list
-        :raises ValueError: If list contains non-comparable elements
-        """
-        if not isinstance(arr, list):
-            raise TypeError("Input must be a list.")
-        if not all(isinstance(x, (int, float)) for x in arr):
-            raise ValueError("All elements in the list must be integers or floats.")
+    :param arr: Input array to be sorted
+    :raises TypeError: If input is not a list
+    :raises ValueError: If list contains non-comparable elements
+    """
+    if not isinstance(arr, list):
+        raise TypeError("Input must be a list.")
+    if not all(isinstance(x, (int, float)) for x in arr):
+        raise ValueError("All elements in the list must be integers or floats.")
