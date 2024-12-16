@@ -1,5 +1,5 @@
 def get_user_input():
-    return input("Enter numbers separated by spaces: ").split()
+    return input("Enter numbers: ").split()
 
 def bubble_sort(arr):
     """
