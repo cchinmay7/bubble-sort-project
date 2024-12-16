@@ -1,12 +1,6 @@
 def get_user_input():
     return input("Provide numbers (space-separated) in one line: ").split()
 
-def swap(a, b):
-
-    temp = a
-    a = b
-    b = temp
-
 def bubble_sort(arr):
     """
     Sorts a list using the Bubble Sort algorithm.
@@ -24,7 +18,7 @@ def bubble_sort(arr):
             # Compare adjacent elements
             if arr[j] > arr[j + 1]:
                 # Swap if the element found is greater than the next element
-                swap(arr[j], arr[j + 1])
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
                 swapped = True
         # If no swaps occurred, the list is already sorted
         if not swapped:
