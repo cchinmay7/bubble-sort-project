@@ -1,6 +1,13 @@
 def get_user_input():
     return input("Provide numbers (space-separated) in one line: ").split()
 
+def swap(a, b):
+    """
+    Swaps two elements but contains a bug.
+    """
+    a = b  # Incorrect logic: Only one element is updated
+    b = a  # This doesn't swap the values correctly
+
 def bubble_sort(arr):
     """
     Sorts a list using the Bubble Sort algorithm.
@@ -18,7 +25,7 @@ def bubble_sort(arr):
             # Compare adjacent elements
             if arr[j] > arr[j + 1]:
                 # Swap if the element found is greater than the next element
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swap(arr[j], arr[j + 1])
                 swapped = True
         # If no swaps occurred, the list is already sorted
         if not swapped:
