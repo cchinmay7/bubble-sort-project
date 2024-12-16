@@ -2,11 +2,10 @@ def get_user_input():
     return input("Provide numbers (space-separated) in one line: ").split()
 
 def swap(a, b):
-    """
-    Swaps two elements but contains a bug.
-    """
-    a = b  # Incorrect logic: Only one element is updated
-    b = a  # This doesn't swap the values correctly
+
+    temp = a
+    a = b
+    b = temp
 
 def bubble_sort(arr):
     """
